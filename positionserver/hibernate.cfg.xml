@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+        <!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Programa17</property>
+        <!--property name="connection.url">jdbc:mysql://192.168.100.251:1433/positions?useUnicode=true&characterEncoding=UTF-8</property-->
+		<property name="hibernate.connection.url">jdbc:mysql://192.168.100.251:1433/positions?useUnicode=true&characterEncoding=UTF-8</property>
+
+        <!-- DB schema will be updated if needed -->
+        <property name="hibernate.show_sql">false</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- TRANSACTION_READ_UNCOMMITTED -->
+        <property name="dscp.defaultTransactionIsolation">1</property>
+        <property name="hibernate.generate_statistics">false</property>
+        <property name="connection.isolation">1</property>
+
+        <property name="connection.isolation">1</property>
+        <mapping class="model.DealModel"/>
+
+    </session-factory>
+</hibernate-configuration>
+
