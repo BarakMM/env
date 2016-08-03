@@ -1,0 +1,1 @@
+C:\Windows\system32>sc  create "position server" binpath= "c:\barak\position\PositionServer.exe" displayname= "Position Server"
